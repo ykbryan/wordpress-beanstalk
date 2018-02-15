@@ -1,12 +1,18 @@
 language: php
+before_script:
+install:
 deploy:
-  provider: elasticbeanstalk
-  access_key_id: AKIAIZ4GYJMYFRYDRJ2Q
-  secret_access_key:
-    secure: bDLdSj8y0g9PfGcYYTz8H/PtZTFW0soV5W4G3hIuTTrTmsj5c5roWOFrCqEbA6EWEyiAZO58vyXsPycVmcYFDv+3d3bJuZ5UKc0+9+rgKHzlFr5Qqlv53wRanuyRSgKZZ5+C1ZLfeWaMfZfxA837FNOzQcmfsd7bkhU6+lPY396rAbapvhqS7coV5r4vlRTqEdZGLq2jV93TvAVn8dk0/QKUbRLrff0UH5W7PBPj01a5vbUZZXwY5kr5rPCZ8crYRyff3gqlCqZHbA/nOIM9Fj5prKiSTb+cxP/B1KPviAaRoLHQ9g5y77tzaDa+ucgBstzfnoq20zwPcO/OfT2100qPn/UNLp8JC0eSJpZuruhcFDPHkDVxpx4zQrtp4c7HBKKxM1mW8i4wWf+TsJHLSTRU4GGCnXn+RpWBBlgJbSodpIL8/XTzU96bY7Bg7XFeyG+xdicJwIWp5siTicYFfdcwJN3DqecS1b194RoT/YzatMgoZag+LmLR0fgI6MXGZSMpkTAK8CW7ljxWJHuPJvJg/uOCj670r8vA/IpHEUgQbxK8c2OcRpg+bOOdv7DV4iqm+QGzblFYYt8st8RttfDmukL485Q6S9A/AxtkXcnjg6j21vXklkC3nhRdRPdiMXqmNAt6XE6MFN4ayimJINFhPP9QJiS7qTF3z6TWdgQ=
-  region: ap-southeast-2
-  app: thenerdfamily.com
-  env: thenerdfamilycom-prod
-  on:
-    branch: master
-    repo: ykbryan/wordpress-beanstalk
+    provider: elasticbeanstalk
+    access_key_id: AKIAIZ4GYJMYFRYDRJ2Q
+    secret_access_key:
+        secure: bDLdSj8y0g9PfGcYYTz8H/PtZTFW0soV5W4G3hIuTTrTmsj5c5roWOFrCqEbA6EWEyiAZO58vyXsPycVmcYFDv+3d3bJuZ5UKc0+9+rgKHzlFr5Qqlv53wRanuyRSgKZZ5+C1ZLfeWaMfZfxA837FNOzQcmfsd7bkhU6+lPY396rAbapvhqS7coV5r4vlRTqEdZGLq2jV93TvAVn8dk0/QKUbRLrff0UH5W7PBPj01a5vbUZZXwY5kr5rPCZ8crYRyff3gqlCqZHbA/nOIM9Fj5prKiSTb+cxP/B1KPviAaRoLHQ9g5y77tzaDa+ucgBstzfnoq20zwPcO/OfT2100qPn/UNLp8JC0eSJpZuruhcFDPHkDVxpx4zQrtp4c7HBKKxM1mW8i4wWf+TsJHLSTRU4GGCnXn+RpWBBlgJbSodpIL8/XTzU96bY7Bg7XFeyG+xdicJwIWp5siTicYFfdcwJN3DqecS1b194RoT/YzatMgoZag+LmLR0fgI6MXGZSMpkTAK8CW7ljxWJHuPJvJg/uOCj670r8vA/IpHEUgQbxK8c2OcRpg+bOOdv7DV4iqm+QGzblFYYt8st8RttfDmukL485Q6S9A/AxtkXcnjg6j21vXklkC3nhRdRPdiMXqmNAt6XE6MFN4ayimJINFhPP9QJiS7qTF3z6TWdgQ=
+    region: ap-southeast-2
+    app: thenerdfamily.com
+    env: thenerdfamilycom-prod
+    on:
+        branch: master
+        repo: ykbryan/wordpress-beanstalk
+
+notifications:
+    on_success: never
+    on_failure: always
