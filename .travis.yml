@@ -8,4 +8,5 @@ deploy:
   app: thenerdfamily.com
   env: thenerdfamilycom-prod
   on:
+    branch: master
     repo: ykbryan/wordpress-beanstalk
