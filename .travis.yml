@@ -1,6 +1,6 @@
 language: php
 before_script:
-script:
+script: ./scripts/run-tests.sh
 install:
 deploy:
     provider: elasticbeanstalk
@@ -13,7 +13,6 @@ deploy:
     on:
         branch: master
         repo: ykbryan/wordpress-beanstalk
-
 notifications:
     on_success: never
     on_failure: always
