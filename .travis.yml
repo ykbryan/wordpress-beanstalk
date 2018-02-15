@@ -1,6 +1,9 @@
 language: php
+php:
+    - '7.1'
+    - hhvm
 before_script:
-script: ./scripts/run-tests.sh
+script:
 install:
 deploy:
     provider: elasticbeanstalk
